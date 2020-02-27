@@ -17,5 +17,27 @@ router.get('/', (req, res) => {
         res.render('admin/index', data);
     });
 });
+router.get('/user_list', (req, res) => {
+
+    userModel.getAll(function(results) {
+        var data = {
+            admin_id: req.session.u_id,
+            uList: results
+        };
+        res.render('admin/user_list', data);
+    });
+});
+
+
+router.get('/user-edit-account', (req, res) => {
+
+    userModel.getAll(function(results) {
+        var data = {
+            admin_id: req.session.u_id,
+            uList: results
+        };
+        res.render('admin/admin-edit-account', data);
+    });
+});
 
 module.exports = router;

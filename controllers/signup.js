@@ -29,10 +29,10 @@ router.post('/', function(req, res) {
         console.log(user);
         userModel.insert(user, function(results) {
             if (results) {
-                req.session.success = 'Successfully sign up...Good to go!!';
+                req.session.success = 'Successfully sign';
                 res.redirect('/signup');
             } else {
-                req.session.success = 'Probelm with signup..try again'
+                req.session.success = 'Error'
                 res.redirect('/signup');
             }
         });

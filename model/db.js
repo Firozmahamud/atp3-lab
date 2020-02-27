@@ -48,7 +48,7 @@ module.exports = {
             }
 
             connection.end(function(err) {
-                console.log('connection end');
+                console.log('connection ending ...');
             });
         });
     },
@@ -75,7 +75,7 @@ module.exports = {
                 });
             }
             connection.end(function(err) {
-                console.log('connection end');
+                console.log('connection ending ...');
             });
         });
     }
