@@ -4,62 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <style>
-
-        table {
-            border-collapse: collapse;
-        }
-        td{
-            padding: 10px
-        }
-    </style>
+    
 </head>
 <body>
     <h2><a href="/home-admin">Online computer shop</a></h2> <br>
-    
+    <h3>Welcome <%= user_info.user_name.toUpperCase() %></h3>
     <button><a href="/home-admin/user_list">View all User</a></button> | 
-    <button><a href="/home-admin/admin-edit-account">Edit account</a></button> |
-    
-   <button><a href='/home-admin/add_components'>Add component</a></button> |
-    <button><a href='/home-admin/add brands'>Add brands </a></button> ||
-    <button><a href='/home-admin/view_brands'>View brands</a></button>
+    <button><a href='/home-admin/admin-edit_account'>Edit Account</a></button> |
+    <button><a href='/home-admin/add_restaurants'>Add user</a></button> |
+    <button><a href='/home-admin/add_restaurants'>Add products</a></button> |
+    <button><a href='/home-admin/edit_restaurants'>Add brands</a></button> |
+    <button><a href='/home-admin/view_restaurants'>View products</a></button>
     <button><a href="/logout">Logout</a></button>
     <br> <br> <br>
-    <table border="1">
+   
         <tr>
-            <td colspan="2" align="center"><strong><%= user_info.user_name.toUpperCase()%></strong> information</td>
+            <td align="center"><strong><%= user_info.user_name.toUpperCase()%></strong> <br>information</td>
         </tr>
+        <br>
         <tr>
             <td>Your name:</td>
             <td><%= user_info.user_name%></td>
         </tr>
+
+        <br>
+
          <tr>
             <td>Your Email:</td>
             <td><%= user_info.user_email%></td>
         </tr>
+        <br>
         <tr>
             <td>Role:</td>
             <td><%= user_info.user_type%></td>
         </tr>
+        <br>
         <tr>
             <td>Relationship status:</td>
             <td><%= user_info.user_relationship_status%></td>
         </tr>
+        <br>
         <tr>
-            <td>location:</td>
+            <td>Location:</td>
             <td><%= user_info.user_location %></td>
         </tr>
+        <br>
         <tr>
             <td>gender:</td>
             <td><%= user_info.user_gender %></td>
         </tr>
+        <br>
         <tr>
-            
-        <tr>
-            <td>dob:</td>
+            <td>DOB:</td>
             <td><%= user_info.user_dob %></td>
         </tr>
-    </table>
+   
     
 </body>
 </html>

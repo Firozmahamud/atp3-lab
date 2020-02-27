@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 
 router.post('/', function(req, res) {
         var user = {
-            name: req.body.f_name + req.body.l_name,
+            name: req.body.f_name + " " + req.body.l_name,
             u_email: req.body.u_email,
             user_type: req.body.user_type,
             relationship_status: req.body.relationship_status,
@@ -29,10 +29,10 @@ router.post('/', function(req, res) {
         console.log(user);
         userModel.insert(user, function(results) {
             if (results) {
-                req.session.success = 'Successfully sign';
+                req.session.success = 'Successfully sign up...Good to go!!';
                 res.redirect('/signup');
             } else {
-                req.session.success = 'Error'
+                req.session.success = 'Probelm with signup..try again'
                 res.redirect('/signup');
             }
         });

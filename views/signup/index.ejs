@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title%></title>
-   
+    <style>
+        body {
+            width: 700px;
+            margin:  20px auto;
+        }
+    </style>
 </head>
 <body>
-    <h2><%= title %></h2>
+    <h2>Welcome to <%= title %></h2>
     <form action="/signup" method="POST">
         <table class="table table-bordered table-hover">
             <tr style="text-align: center">
                 <td colspan="6" class="active">
-                    <h2>Sign up here</h2>
+                    <h2>Sign Up</h2>
                 </td>
             </tr>
 
@@ -41,7 +46,7 @@
                 <td class="labelFont">Usertype</td>
                 <td>
                     <select name="user_type" class="form-control">
-<option value="customer">customer</option>
+<option value="Member">Member</option>
 <option value="Admin">Admin</option>
 </select>
                 </td>
@@ -53,7 +58,12 @@
                     <select class="form-control" name="relationship_status">
 <option value="Single"  >Single</option>
 <option value="Married" >Married</option>
-
+<option value="Engaged" >Engaged</option>
+<option value="In a Relationship" >In a Relationship</option>
+<option value="It's Complicated" >It's Complicated</option>
+<option value="Separated" >Separated</option>
+<option value="Divorced" >Divorced</option>
+<option value="Widowed" >Widowed</option>
 </select>
                 </td>
             </tr>
@@ -72,12 +82,21 @@
                 </td>
             </tr>
 
-           <td class="labelFont">Location</td>
+            <tr>
+                <td class="labelFont">Location</td>
                 <td>
-                    <input class="form-control" type="Location" name="u_location" required>
+                    <select class="form-control" name="u_location">
+<option value="Banani" >Banani</option>
+<option value="Gulsan-1" >Gulsan-1</option>
+<option value="Gulsan-2" >Gulsan-2</option>
+<option value="Mohakhali" >Mohakhali</option>
+<option value="Kuril" >Kuril</option>
+<option value="Khilkhet" >Khilkhet</option>
+<option value="Nikunjo-2" >Nikunjo-2</option>
+<option value="Airport" >Airport</option>
+</select>
                 </td>
             </tr>
-
 
             <tr>
                 <td class="labelFont">Gender</td>
