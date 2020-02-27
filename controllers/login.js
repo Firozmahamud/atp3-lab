@@ -24,7 +24,7 @@ router.post('/', (req, res) => {
                 if (req.session.u_type == "Admin") {
                     res.redirect('/home-admin');
                 } else
-                    res.redirect('/home-member');
+                    res.redirect('/home-customer');
             } else {
                 req.session.success = "Invalid User";
                 res.redirect('/login');
